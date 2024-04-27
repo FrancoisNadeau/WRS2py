@@ -2,6 +2,10 @@ import numpy as np
 import pandas as pd
 from scipy.stats import percentileofscore
 
+from .WRS2py.bootdpci import bootdpci
+from .WRS2py.rmmismcp import rmmismcp
+
+
 def Dqcomhd(x, y, q = np.arange(0.1, 1, 0.1), nboot = 1000, na_rm = True, **kwargs):
     alpha = 0.05
     if na_rm:
